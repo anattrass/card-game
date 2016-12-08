@@ -1,21 +1,29 @@
 package game_management;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Deck{
 
-  public Card[] deck;
+  public ArrayList<Card> cards;
 
-  public Deck(){
-    this.deck = new Card[52];
+  public Deck(ArrayList<Card> cards){
+    this.cards = cards;
+    populate();
+}
+
+  public void populate() {
+    for (SuitType suit : SuitType.values()) {
+      for (ValueType value : ValueType.values()) {
+    cards.add(new Card(suit, value));
+      }
+    }
   }
 
   public int countCardsInDeck(){
-    int count = 0;
-    for (Card card : deck){
-      if (card != null){
-        count++;
-      }
-    }
-    return count;
-  }  
+    return cards.size();
+  }
+
+
 
 }

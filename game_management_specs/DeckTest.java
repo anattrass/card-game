@@ -1,22 +1,19 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import game_management.*;
+import java.util.ArrayList;
 
 public class DeckTest {
 
   Deck deck;
-  Card card;
 
   @Before 
   public void before() {
-    deck = new Deck();
-    card = new Card(SuitType.CLUB, ValueType.FOUR);
+    deck = new Deck( new ArrayList<Card>() );
   }
 
   @Test
-  public void decStartsEmpty(){
-    assertEquals(0, deck.countCardsInDeck());
+  public void decStartsFull(){
+    assertEquals(52, deck.countCardsInDeck());
   }
-
-
 }

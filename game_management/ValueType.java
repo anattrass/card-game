@@ -2,7 +2,6 @@ package game_management;
 
 public enum ValueType {
 
-  ONE,
   TWO,
   THREE,
   FOUR,

@@ -18,11 +18,11 @@ public class DeckTest {
     assertEquals(52, deck.countCardsInDeck());
   }
 
-  // @Test
-  //   public void canAddCard() {
-  //       deck.addCard(card);
-  //       assertEquals(1, deck.countCardsInDeck());
-  //   }
+  @Test
+    public void canAddCard() {
+        deck.addCard(card);
+        assertEquals(53, deck.countCardsInDeck());
+    }
 
   @Test
     public void canDealCard() {

@@ -33,9 +33,9 @@ public class Deck{
     Collections.shuffle(cards);
   }
 
-  // public void addCard(Card card) {
-  //     this.cards.add(card);
-  // }
+  public void addCard(Card card) {
+      this.cards.add(card);
+  }
 
   public Card dealCard() {
          return this.cards.remove(0);

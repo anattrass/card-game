@@ -7,10 +7,15 @@ public class Deck{
 
   public ArrayList<Card> cards;
 
-  public Deck(ArrayList<Card> cards){
-    this.cards = cards;
+  public Deck(){
+
+    this.cards = new ArrayList<Card>();
     populate();
 }
+
+  public ArrayList<Card> getDeck() {
+    return this.cards;
+  }
 
   public void populate() {
     for (SuitType suit : SuitType.values()) {
@@ -23,6 +28,20 @@ public class Deck{
   public int countCardsInDeck(){
     return cards.size();
   }
+
+  public void shuffle() {
+    Collections.shuffle(cards);
+  }
+
+  // public void addCard(Card card) {
+  //     this.cards.add(card);
+  // }
+
+  public Card dealCard() {
+         return this.cards.remove(0);
+     }
+
+
 
 
 

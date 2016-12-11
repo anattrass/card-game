@@ -18,4 +18,9 @@ public class Card {
     return this.value;
   }
 
+  @Override
+  public String toString() {
+    return value + " of " + suit; 
+  }
+
 }

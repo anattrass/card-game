@@ -6,14 +6,27 @@ import java.util.ArrayList;
 public class DeckTest {
 
   Deck deck;
+  Card card;
 
   @Before 
   public void before() {
-    deck = new Deck( new ArrayList<Card>() );
+    deck = new Deck();
   }
 
   @Test
-  public void decStartsFull(){
+  public void decIsFull(){
     assertEquals(52, deck.countCardsInDeck());
   }
+
+  // @Test
+  //   public void canAddCard() {
+  //       deck.addCard(card);
+  //       assertEquals(1, deck.countCardsInDeck());
+  //   }
+
+  @Test
+    public void canDealCard() {
+        deck.dealCard();
+        assertEquals(51, deck.countCardsInDeck());
+    }
 }

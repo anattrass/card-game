@@ -11,6 +11,6 @@ public class Dealer extends Player {
 
     public void dealCardToPlayer(Player receiver) {
         Card cardDealt = this.deck.dealCard();
-        receiver.addCardToHand(cardDealt);
+        receiver.beDealtCard(cardDealt);
     }
 }

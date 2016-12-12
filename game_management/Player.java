@@ -13,8 +13,8 @@ public class Player {
         return this.name;
     }
 
-    public void addCardToHand(Card card) {
-          this.hand.addCard(card);
-      }
+    public void beDealtCard(Card card) {
+      this.hand.beDealtCard(card);
+    }
 
   }
